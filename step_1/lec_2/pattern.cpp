@@ -57,6 +57,16 @@
  * *         * *
  *             *
 
+ * pattern: 09
+
+ 4 4 4 4 4 4 4
+ 4 3 3 3 3 3 4
+ 4 3 2 2 2 3 4
+ 4 3 2 1 2 3 4
+ 4 3 2 2 2 3 4
+ 4 3 3 3 3 3 4
+ 4 4 4 4 4 4 4
+
 */
 #include <iostream>
 using namespace std;
@@ -120,12 +130,26 @@ void pat_4(int n)
     }
 }
 
+void pat_5(int n)
+{
+    cout << "\nPattern 05:\n";
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i + 1; j++)
+        {
+            char c = 'A' + j;
+            cout << c << " ";
+        }
+        cout << endl;
+    }
+}
 int main()
 {
     pat_1(5);
     pat_2(5);
     pat_3(5);
     pat_4(5);
+    pat_5(5);
 
     cout << endl;
     return 0;
