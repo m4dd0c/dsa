@@ -40,13 +40,16 @@
 
  * pattern: 07
 
- * * * * * * *
- * * *   * * *
- * *       * *
- *           *
- * *       * *
- * * *   * * *
- * * * * * * *
+ * * * * * * * * * *
+ * * * *     * * * *
+ * * *         * * *
+ * *             * *
+ *                 *
+ *                 *
+ * *             * *
+ * * *         * * *
+ * * * *     * * * *
+ * * * * * * * * * *
 
  * pattern: 08
 
@@ -62,6 +65,7 @@
 
  4 4 4 4 4 4 4
  4 3 3 3 3 3 4
+ 4 3 2 2 2 3 4
  4 3 2 2 2 3 4
  4 3 2 1 2 3 4
  4 3 2 2 2 3 4
@@ -156,6 +160,53 @@ void pat_6(int n)
         cout << endl;
     }
 }
+void pat_7(int n)
+{
+    cout << "\nPattern 07:\n";
+    for (int i = 0; i < n; i++)
+    {
+        // lets break it in 4 part (squares)
+        // first part (reverse half starred triangle and half spaced triangle)
+        for (int j = 0; j < n; j++)
+        {
+            if (j < n - i)
+                cout << "* ";
+            else
+                cout << "  ";
+        }
+        // second part (reverse half spaced triangle and half starred triangle)
+        for (int j = 0; j < n; j++)
+        {
+            if (j >= i)
+                cout << "* ";
+            else
+                cout << "  ";
+        }
+        cout << endl;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        // third part (reverse of first part)
+        for (int j = 0; j < n; j++)
+        {
+            if (j <= i)
+                cout << "* ";
+            else
+                cout << "  ";
+        }
+        // fourth part (reverse of second part)
+        for (int j = 0; j < n; j++)
+        {
+            if (j < n - i - 1)
+                cout << "  ";
+            else
+                cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     pat_1(5);
@@ -164,6 +215,7 @@ int main()
     pat_4(5);
     pat_5(5);
     pat_6(5);
+    pat_7(4);
 
     cout << endl;
     return 0;
