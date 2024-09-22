@@ -53,13 +53,15 @@
 
  * pattern: 08
 
- *             *
- * *         * *
- * * *     * * *
- * * * * * * * *
- * * *     * * *
- * *         * *
- *             *
+ *                 *
+ * *             * *
+ * * *         * * *
+ * * * *     * * * *
+ * * * * * * * * * *
+ * * * *     * * * *
+ * * *         * * *
+ * *             * *
+ *                 *
 
  * pattern: 09
 
@@ -198,7 +200,7 @@ void pat_7(int n)
         // fourth part (reverse of second part)
         for (int j = 0; j < n; j++)
         {
-            if (j < n - i - 1)
+            if (j < n - (i + 1))
                 cout << "  ";
             else
                 cout << "* ";
@@ -207,6 +209,65 @@ void pat_7(int n)
     }
 }
 
+void pat_8(int n)
+{
+    cout << "\nPattern 08:\n";
+    // break in 4 parts
+    // 1st section
+    for (int i = 0; i < n; i++)
+    {
+        // 1st part
+        for (int j = 0; j < n; j++)
+        {
+            // 1st part
+            if (j <= i)
+                cout << "* ";
+            else
+                cout << "  ";
+        }
+        // 2nd part
+        for (int j = 0; j < n; j++)
+        {
+            if (j < n - (i + 1))
+                cout << "  ";
+            else
+                cout << "* ";
+        }
+        cout << endl;
+    }
+    // 2nd section
+    for (int i = 0; i < n; i++)
+    {
+        // 3rd part
+        for (int j = 0; j < n; j++)
+        {
+            if (j < n - (i + 1))
+                cout << "* ";
+            else
+                cout << "  ";
+        }
+        // 4th part
+        for (int j = 0; j < n; j++)
+        {
+            if (j <= i)
+                cout << "  ";
+            else
+                cout << "* ";
+        }
+        cout << endl;
+    }
+}
+/*
+ *                 *
+ * *             * *
+ * * *         * * *
+ * * * *     * * * *
+ * * * * * * * * * *
+ * * * *     * * * *
+ * * *         * * *
+ * *             * *
+ *                 *
+ */
 int main()
 {
     pat_1(5);
@@ -215,7 +276,8 @@ int main()
     pat_4(5);
     pat_5(5);
     pat_6(5);
-    pat_7(4);
+    pat_7(5);
+    pat_8(5);
 
     cout << endl;
     return 0;
