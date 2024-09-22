@@ -4,7 +4,7 @@
 using namespace std;
 string compareNM(int n, int m)
 {
-    // code here
+   // code here
     if (n < m)
         return "lesser";
     else if (n == m)
