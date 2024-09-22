@@ -257,17 +257,21 @@ void pat_8(int n)
         cout << endl;
     }
 }
-/*
- *                 *
- * *             * *
- * * *         * * *
- * * * *     * * * *
- * * * * * * * * * *
- * * * *     * * * *
- * * *         * * *
- * *             * *
- *                 *
- */
+void pat_9(int n)
+{
+    cout << "\nPattern 09:\n";
+    for (int i = 0; i < (2 * n - 1); i++)
+    {
+        for (int j = 0; j < (2 * n - 1); j++)
+        {
+            // i suggest you watch tutorial again.
+            int top = i, left = j, right = (2 * n - 2) - j, bottom = (2 * n - 2) - i;
+            cout << (n - min(min(top, left), min(right, bottom))) << " ";
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     pat_1(5);
@@ -278,6 +282,8 @@ int main()
     pat_6(5);
     pat_7(5);
     pat_8(5);
+    // I had to watch video to solve pattern 9
+    pat_9(5);
 
     cout << endl;
     return 0;
