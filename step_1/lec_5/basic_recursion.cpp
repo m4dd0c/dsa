@@ -31,6 +31,15 @@ int sum_of_first_n(int n, int sum)
     sum_of_first_n(--n, sum + n);
 }
 
+void print_til_1_backtrack(int end, int num)
+{
+    // base case
+    if (end > num)
+        return;
+    print_til_1_backtrack(end + 1, num);
+    cout << end << " ";
+}
+
 long long int fact(int n)
 {
     if (n == 0 || n == 1)
@@ -43,6 +52,8 @@ int main()
     print_name("ManishBhai", 5);
     cout << endl;
     print_til_1(5);
+    cout << endl;
+    print_til_1_backtrack(1, 5);
     cout << endl;
     print_til_n(1, 10);
     cout << endl;
