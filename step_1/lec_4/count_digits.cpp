@@ -1,5 +1,5 @@
 // ref: https://www.geeksforgeeks.org/problems/count-digits5716/1
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int count_digit(int n)
@@ -22,9 +22,14 @@ int count_digit(int n)
     return ans;
 }
 
+int count_length_of_number(int n)
+{
+    return log10(n) + 1;
+}
 int main()
 {
     int n = 22074;
-    cout << count_digit(n);
+    cout << count_digit(n) << endl;
+    cout << count_length_of_number(n);
     return 0;
 }
