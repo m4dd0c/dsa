@@ -1,18 +1,21 @@
-#include <bits/stdc++.h>
+// palindrome
 
 #include "../../package/linear.cpp"
+#include <bits/stdc++.h>
 using namespace std;
 
 void reverse(int *arr, int s, int e) {
   // base case
-  if (s >= e) return;
+  if (s >= e)
+    return;
   swap(arr[s], arr[e]);
   reverse(arr, s + 1, e - 1);
 }
 
 bool palindrome(int *arr, int s, int e) {
   // base case
-  if (s >= e) return true;
+  if (s >= e)
+    return true;
   if (arr[s] != arr[e]) {
     return false;
   } else {

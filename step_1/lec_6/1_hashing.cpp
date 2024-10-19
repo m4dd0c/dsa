@@ -1,6 +1,7 @@
-#include <bits/stdc++.h>
+// Hashing
 
 #include "../../package/linear.cpp"
+#include <bits/stdc++.h>
 using namespace std;
 
 vector<int> num_of_occurance_in_int_arr(vector<int> arr) {
