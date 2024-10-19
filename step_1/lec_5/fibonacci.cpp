@@ -9,6 +9,7 @@ int fib(int n) {
 
 int main() {
   // find nth fibonacci number using recursion
+  // tc(2^n)
   cout << fib(7);
   return 0;
 }
