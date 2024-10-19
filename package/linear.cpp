@@ -9,7 +9,7 @@ void print_arr(auto *arr, int size) {
   cout << endl;
 }
 
-void print_vect(auto *vect) {
+void print_vect(vector<int> vect) {
   for (auto i : vect) {
     cout << i << " ";
   }
